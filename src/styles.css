@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    background-color: #764abc;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+    padding: 5px;
+
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.inside-container {
+    width: 95%;
+    margin: auto;
+}
+
+.title {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-bottom: .5px solid #dcdcdc;
+
+    color: #555;
+    text-align: center;
+}
+
+.list-container {
+    width: 100%;
+    min-height: 50px;
+}
+
+.list-container ul {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 30px 0;
+}
+
+.list-container ul li {
+    width: 100%;
+    height: 30px;
+
+    margin: 5px 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border-bottom: .3px solid #ddd;
+}
+
+.list-container ul li h3 {
+    font-size: 16px;
+    align-self: center;
+
+    max-width: 80%;
+}
+
+.list-container ul li .buttons {
+    width: 15%;
+
+    align-self: center;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.list-container ul li .buttons button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+
+    cursor: pointer;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    outline: none;
+    transition: .5s;
+
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+.list-container ul li .buttons button.btn-complete {
+    color: #21b770;
+    border: 1.3px #21b770 solid;
+}
+
+.list-container ul li .buttons button.btn-complete:hover {
+    background-color: #21b770;
+    color: #fff;
+    border-color: #fff;
+}
+
+.list-container ul li .buttons button.btn-delete {
+    color: #f35939;
+    border: 1.3px #f35939 solid;
+
+}
+
+.list-container ul li .buttons button.btn-delete:hover {
+    background-color: #f35939;
+    color: #fff;
+    border-color: #fff;
+}
+
+
+
+.form-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    padding: 15px 0;
+}
+
+.form-container input {
+    width: 100%;
+    height: 40px;
+
+    padding: 10px;
+    font-size: 16px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: #dcdcdc;
+
+    color: #555;
+
+    transition: 0.5;
+}
+
+.form-container button {
+    width: 1px;
+    height: 1px;
+
+    position: absolute;
+    right: 20px;
+    top: 50%;
+
+    overflow: hidden;
+    outline: none;
+
+    visibility: hidden;
+
+    background-color: #21b770;
+    color: #fff;
+    border: none;
+
+    font-size: 1px;
+    font-weight: bold;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.5s
+}
+
+.form-container input:focus+button {
+    visibility: visible;
+
+    width: 60px;
+    height: 60px;
+
+    right: -10px;
+    top: 5px;
+
+    font-size: 40px;
+}
